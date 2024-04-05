@@ -45,7 +45,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - [Solution URL:](https://github.com/akmtasdikulislam/faq-accordion)
-- [Live Site URL:](https://your-live-site-url.com)
+- [Live Site URL:](https://akmtasdikulislam.github.io/faq-accordion/)
 
 ## My process
 
