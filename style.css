@@ -45,6 +45,10 @@ body {
     width     : 100%;
 }
 
+.bg #mobile-background {
+    display: none;
+}
+
 main {
     background-color: var(--white);
     border-radius   : 1em;
@@ -113,4 +117,53 @@ main h1 img {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+    .bg {
+        height: 13.3em;
+    }
+
+    .bg #mobile-background {
+        display: block;
+    }
+
+    .bg #desktop-background {
+        display: none;
+    }
+
+    main {
+        border-radius: .55em;
+        padding      : 1em 1.5em;
+        width        : 87%;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main h1 img {
+        margin-right: .8em;
+        width       : .7em;
+    }
+
+    .accordion#item-1 {
+        margin-top: 1.5em;
+    }
+
+    .accordion-title {
+        letter-spacing: initial;
+        margin-top    : 1em;
+    }
+
+    .accordion-title img {
+        padding-left: 2em;
+    }
+
+    .accordion-content {
+        font-size  : .9em;
+        line-height: 1.46em;
+        margin-top : 1.5em;
+    }
+
 }
