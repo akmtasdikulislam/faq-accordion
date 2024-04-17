@@ -38,9 +38,10 @@
     <main>
       <h1><img src="./assets//images/icon-star.svg" alt="star" />FAQs</h1>
       <div class="accordion" id="item-1">
-        <p class="accordion-title">
+        <p class="accordion-title open">
           What is Frontend Mentor, and how will it help me?
-          <img src="./assets/images/icon-plus.svg" alt="" />
+          <img src="./assets/images/icon-plus.svg" class="plus-icon" alt="" />
+          <img src="./assets/images/icon-minus.svg" class="minus-icon" />
         </p>
         <p class="accordion-content">
           Frontend Mentor offers realistic coding challenges to help developers
@@ -51,10 +52,9 @@
       </div>
       <div class="accordion" id="item-2">
         <p class="accordion-title">
-          Is Frontend Mentor free?<img
-            src="./assets/images/icon-plus.svg"
-            alt=""
-          />
+          Is Frontend Mentor free?
+          <img src="./assets/images/icon-plus.svg" class="plus-icon" alt="" />
+          <img src="./assets/images/icon-minus.svg" class="minus-icon" />
         </p>
         <p class="accordion-content">
           Yes, Frontend Mentor offers both free and premium coding challenges,
@@ -64,10 +64,9 @@
       </div>
       <div class="accordion" id="item-3">
         <p class="accordion-title">
-          Can I use Frontend Mentor projects in my portfolio?<img
-            src="./assets/images/icon-plus.svg"
-            alt=""
-          />
+          Can I use Frontend Mentor projects in my portfolio?
+          <img src="./assets/images/icon-plus.svg" class="plus-icon" alt="" />
+          <img src="./assets/images/icon-minus.svg" class="minus-icon" />
         </p>
         <p class="accordion-content">
           Yes, you can use projects completed on Frontend Mentor in your
@@ -77,10 +76,9 @@
       </div>
       <div class="accordion" id="item-4">
         <p class="accordion-title">
-          How can I get help if I'm stuck on a challenge?<img
-            src="./assets/images/icon-plus.svg"
-            alt=""
-          />
+          How can I get help if I'm stuck on a challenge?
+          <img src="./assets/images/icon-plus.svg" class="plus-icon" alt="" />
+          <img src="./assets/images/icon-minus.svg" class="minus-icon" />
         </p>
         <p class="accordion-content">
           The best place to get help is inside Frontend Mentor's Discord
@@ -99,5 +97,22 @@
         >Akm Tasdikul Islam</a
       >.
     </div>
+    <script>
+      const accordionItems = document.querySelectorAll(".accordion-title"); // selecting all accordion.
+
+      accordionItems.forEach(
+        (
+          item //running a forEach loop on page load to add  a CLICK event-listener to all accordions
+        ) =>
+          item.addEventListener("click", () => {
+            // when an accordion is clicked, at first it checks if it is already opened or not by determining whether it is already containing the "open" class. Then removing "open" class from the element (if it has any). Finally adding "open" class to show its content.
+            const isItemOpen = item.classList.contains("open");
+            accordionItems.forEach((item) => item.classList.remove("open"));
+            if (!isItemOpen) {
+              item.classList.toggle("open");
+            }
+          })
+      );
+    </script>
   </body>
 </html>
